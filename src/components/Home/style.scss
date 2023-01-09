@@ -1,0 +1,128 @@
+.home-page{
+
+    .text-zone{
+        position: absolute;
+        left: 34%;
+        top: 30%;
+        transform: translate(-50%);
+        width: 40%;
+        min-height: 90%;
+    }
+
+    h1{
+        color: white;
+        font-size: 53px;
+        margin: 10px;
+        font-family: 'Coolvetica';
+        font-weight: 500;
+         
+      &::before{
+        content: "<h1>";
+        font-family: 'Le Belle Aurore';
+        color: yellow;
+        font-size: 18px;
+        position: absolute;
+        margin-top: -20px;
+        left: -50px;
+        top: 36px;
+        opacity: 0.6;
+      }
+
+      &::after{
+        content: "<h1>";
+        font-family: 'Le Belle Aurore';
+        color: yellow;
+        font-size: 18px;
+        position: absolute;
+        margin-top: 18px;
+        margin-left: 20px;
+        animation: fadeIn 1s 1.7s backwards;
+        opacity: 0.8;
+      }
+
+        img{
+            width: 32px;
+            margin-left: 20px;
+            opacity: 0;
+            height: auto;
+            animation: rotateIn 1s linear both;
+            animation-delay: 1.4s;
+        }
+    }
+   
+}
+
+h2{
+    color: #8d8d8d;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Le Belle Aurore';
+    letter-spacing: 3px;
+    margin-left: 15px;
+    animation: fadeIn 1s 1.8s backwards;
+}
+
+.flat-button{
+    color: yellow;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-family: serif;
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid yellow;
+    margin-top: 15px;
+    margin-left: 15px;
+    float: left;
+    animation: fadeIn 1s 1.8s backwards;
+    white-space: nowrap;
+
+    &:hover{
+    background: yellow; 
+    color: #333;
+   }
+}
+
+@media screen and (max-width: 1200px) {
+  .tags,
+  .home-page h1:before,
+  .home-page h1:after {
+    display: none;
+  }
+
+  .home-page .text-zone {
+    position: initial;
+    width: 100%;
+    transform: none;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .home-page .flat-button {
+    float: none;
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 124px;
+  }
+
+  .logo-container {
+    position: relative;
+    width: 100px;
+    height: auto;
+    top: 50px;
+    right: 0;
+    box-sizing: border-box;
+    margin: auto;
+    left: 0;
+  }
+
+  .logo-container svg {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    margin: auto;
+  }
+}
